@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class Solution {
+class SolutionMajorityElement {
     public int majorityElement(int[] nums) {
         
         Map<Integer, Integer> map = new HashMap<>();
@@ -24,9 +24,9 @@ class Solution {
     }
 }
 
-class Test{
+class TestMajorityElement{
     public static void main(String args[]){
-        Solution s = new Solution();
+        SolutionMajorityElement s = new SolutionMajorityElement();
         int data[] = {2,2,1,1,1,2,2};
         System.out.println(s.majorityElement(data));
     }
