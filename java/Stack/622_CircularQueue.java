@@ -1,7 +1,12 @@
+/*
+    @author Alejandro Arzola
+    https://leetcode.com/problems/design-circular-queue/
+*/
+
 package Stack;
 
 class CircularQueue {
-    
+
     private int head;
     private int tail;
     private int size;
