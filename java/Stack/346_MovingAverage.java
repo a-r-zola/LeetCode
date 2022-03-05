@@ -1,4 +1,3 @@
-
 /*
     @author Alejandro Arzola
     https://leetcode.com/problems/moving-average-from-data-stream/
