@@ -116,6 +116,8 @@ class SolutionWallAndGates {
             dfs(coordinate, rooms, sizeX, sizeY);
             System.out.println("result");
             printMap(rooms);
+            System.out.println("End result");
+            
         }
         // System.out.println("Resultado");
 
@@ -154,8 +156,8 @@ class SolutionWallAndGates {
                 Coordinate point = queue.poll();
                 //point.print();
                 rooms[point.getY()][point.getX()] = step;
-                if(point.getY() == point.getX()){
-                    System.out.println( "nmatrix");
+                if(point.getY() == 2 && point.getX() == 2){
+                    System.out.println( "nmatrix step ==" +step);
                     printMap(rooms);
                     System.out.println( "fin nmatrix");
                 }
@@ -185,38 +187,57 @@ class SolutionWallAndGates {
                 //right.print();
 
                 if(up != null && rooms[up.getY()][up.getX()] > 0 && !visited[up.getY()][up.getX()]){
-                    System.out.println( "up "+step + " - " + rooms[up.getY()][up.getX()]);
+                    //System.out.println( "up "+step + " - " + rooms[up.getY()][up.getX()]);
                     rooms[up.getY()][up.getX()] = Math.min(step, rooms[up.getY()][up.getX()]);
                     visited[up.getY()][up.getX()] = true;
                     queue.offer(up);
                 }
                 if(down != null && rooms[down.getY()][down.getX()] > 0 && !visited[down.getY()][down.getX()]){
-                    System.out.println( "Down "+step + " - " + rooms[down.getY()][down.getX()]);
+                    if(point.getX() == 2 && point.getY() == 2){
+                        System.out.println("uno");
+                        System.out.println( "down "+step + " - " + rooms[down.getY()][down.getX()]);
+                        System.out.println( "down "+Math.min(step, rooms[down.getY()][down.getX()]));
+                        printMap(rooms);
+                    }
+                    //System.out.println( "Down "+step + " - " + rooms[down.getY()][down.getX()]);
                     rooms[down.getY()][down.getX()] = Math.min(step, rooms[down.getY()][down.getX()]);
                     visited[down.getY()][down.getX()] = true;
                     queue.offer(down);
+                    if(point.getX() == 2 && point.getY() == 2){
+                        System.out.println("dos");
+                        System.out.println( "down "+step + " - " + rooms[down.getY()][down.getX()]);
+                        System.out.println( "down "+Math.min(step, rooms[down.getY()][down.getX()]));
+                        
+                    }
                 }
                 if(left != null && rooms[left.getY()][left.getX()] > 0 && !visited[left.getY()][left.getX()]){
-                    System.out.println( "left "+step + " - " + rooms[left.getY()][left.getX()]);
+                    //System.out.println( "left "+step + " - " + rooms[left.getY()][left.getX()]);
                     rooms[left.getY()][left.getX()] = Math.min(step, rooms[left.getY()][left.getX()]);
                     visited[left.getY()][left.getX()] = true;
                     queue.offer(left);
                 }
                 if(right != null && rooms[right.getY()][right.getX()] > 0 && !visited[right.getY()][right.getX()]){
-                    System.out.println( "right "+step + " - " + rooms[right.getY()][right.getX()]);
-                    System.out.println( "new value 00");
-                    printMap(rooms);
+                    if(point.getX() == 2 && point.getY() == 2){
+                        System.out.println( "right "+step + " - " + rooms[right.getY()][right.getX()]);
+                    }
+                    //System.out.println( "right "+step + " - " + rooms[right.getY()][right.getX()]);
+                    //System.out.println( "new value 00");
+                    //printMap(rooms);
                     
                     rooms[right.getY()][right.getX()] = Math.min(step, rooms[right.getY()][right.getX()]);
                     visited[right.getY()][right.getX()] = true;
                     queue.offer(right);
-                    System.out.println( "new value 11"+ rooms[right.getY()][right.getX()]);
-                    printMap(rooms);
-                    System.out.println( "new value 22"+ rooms[right.getY()][right.getX()]);
+                    //System.out.println( "new value 11"+ rooms[right.getY()][right.getX()]);
+                    //printMap(rooms);
+                    //System.out.println( "new value 22"+ rooms[right.getY()][right.getX()]);
                 }
             }
             step ++;
         }
+        System.out.println("before to send");
+        printMap(rooms);
+        System.out.println("end before to send");
+        
     }
 }
 
