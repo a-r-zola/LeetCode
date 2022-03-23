@@ -2,7 +2,7 @@
     @author Alejandro Arzola
     https://leetcode.com/problems/number-of-islands/
 */
-package Stack;
+package Queue;
 
 import java.util.*;
 

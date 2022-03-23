@@ -2,7 +2,7 @@
     @author Alejandro Arzola
     https://leetcode.com/problems/perfect-squares/
 */
-package Stack;
+package Queue;
 
 import java.util.*;
 

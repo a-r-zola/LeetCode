@@ -3,7 +3,7 @@
     https://leetcode.com/problems/design-circular-queue/
 */
 
-package Stack;
+package Queue;
 
 class CircularQueue {
 

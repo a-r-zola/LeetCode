@@ -3,7 +3,7 @@
     https://leetcode.com/problems/moving-average-from-data-stream/
 */
 
-package Stack;
+package Queue;
 
 import java.util.*;
 

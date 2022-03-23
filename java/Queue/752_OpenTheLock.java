@@ -3,7 +3,7 @@
     https://leetcode.com/problems/open-the-lock/
 */
 
-package Stack;
+package Queue;
 
 import java.util.*;
 
